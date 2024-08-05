@@ -29,11 +29,11 @@ def calcular():
             # Calcula a distância entre os endereços
             loc = geopy.Nominatim(user_agent="distance_calculator")
             
-            loc1 = loc.geocode(endereco1)
+            loc1 = loc.geocode(endereco1, timeout=100)
             loc1_lat = loc1.latitude
             loc1_long = loc1.longitude
             
-            loc2 = loc.geocode(endereco2)
+            loc2 = loc.geocode(endereco2, timeout=100)
             loc2_lat = loc2.latitude
             loc2_long = loc2.longitude
             
