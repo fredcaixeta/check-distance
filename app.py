@@ -70,7 +70,8 @@ def calcular():
         
         return True
     
-    dist = calculo_enderecos(end1, end2)
+    #dist = calculo_enderecos(end1, end2)
+    dist = "teste"
     result = f"A distância entre {end1} e {end2} é de {dist} km."
     print(result)
     
