@@ -1,10 +1,10 @@
 from flask import Flask, request, render_template
-from geopy.distance import geodesic
 import geopy
-import geopy.location
 
 import os
 import csv
+
+import geopy.distance
 
 app = Flask(__name__)
 
@@ -48,7 +48,7 @@ def calcular():
             
     def send_lat_long(loc1_lat, loc1_long, loc2_lat, loc2_long):
         if loc1_lat and loc2_lat:
-            distancia = geodesic((loc1_lat, loc1_long), (loc2_lat, loc2_long)).km
+            distancia = geopy.distance.geodesic((loc1_lat, loc1_long), (loc2_lat, loc2_long)).km
             
             distancia = round(distancia, 2)
             
@@ -60,8 +60,6 @@ def calcular():
         else:
             raise(ValueError)
         
-        
-            
     def salva_csv(dist):
         # Salva as informações no CSV
         with open(csv_file, 'a', newline='') as file:
@@ -70,8 +68,8 @@ def calcular():
         
         return True
     
-    #dist = calculo_enderecos(end1, end2)
-    dist = "teste"
+    dist = calculo_enderecos(end1, end2)
+    #dist = "teste"
     result = f"A distância entre {end1} e {end2} é de {dist} km."
     print(result)
     
