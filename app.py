@@ -42,6 +42,7 @@ def calcular():
             return dist
             
         except Exception as e:
+            print(e)
             raise TypeError
             
             
