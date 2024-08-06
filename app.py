@@ -19,7 +19,7 @@ if not os.path.exists(csv_file):
 def home():
     return render_template(r'interface.html')
 
-@app.route('/calcular', methods=['POST'])
+@app.route('/result', methods=['POST'])
 def calcular():
     end1 = request.form['endereco1']
     end2 = request.form['endereco2']
@@ -73,7 +73,7 @@ def calcular():
     result = f"A distância entre {end1} e {end2} é de {dist} km."
     print(result)
     
-    return result
+    return render_template('result.html', result=result)
 
 
 @app.route('/distancias')
