@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lista de Distâncias</title>
+    <title>List of Distances</title>
 </head>
 <body>
-    <h1>Lista de Distâncias Calculadas</h1>
+    <h1>History of Queries for Distance Calculation</h1>
     <table border="1">
         <tr>
-            <th>Endereço 1</th>
-            <th>Endereço 2</th>
-            <th>Distância</th>
+            <th>Source Address</th>
+            <th>Destination address</th>
+            <th>Distance km</th>
         </tr>
         {% for distance in distances %}
         <tr>
@@ -20,6 +20,6 @@
         </tr>
         {% endfor %}
     </table>
-    <a href="/">Voltar</a>
+    <a href="/">Back</a>
 </body>
 </html>
