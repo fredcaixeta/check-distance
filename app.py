@@ -75,5 +75,18 @@ def calcular():
     
     return result
 
+
+@app.route('/distancias')
+def distancias():
+    distances = []
+    try:
+        with open('distances.csv', mode='r') as file:
+            csv_reader = csv.reader(file)
+            for row in csv_reader:
+                distances.append(row)
+    except FileNotFoundError:
+        distances = []
+    return render_template('distances.html', distances=distances)
+
 if __name__ == '__main__':
     app.run(debug=True)

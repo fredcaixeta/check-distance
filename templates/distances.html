@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Distâncias</title>
+</head>
+<body>
+    <h1>Lista de Distâncias Calculadas</h1>
+    <table border="1">
+        <tr>
+            <th>Endereço 1</th>
+            <th>Endereço 2</th>
+            <th>Distância</th>
+        </tr>
+        {% for distance in distances %}
+        <tr>
+            <td>{{ distance[0] }}</td>
+            <td>{{ distance[1] }}</td>
+            <td>{{ distance[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Voltar</a>
+</body>
+</html>
