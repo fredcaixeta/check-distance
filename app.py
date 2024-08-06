@@ -26,7 +26,7 @@ def calcular():
     
     def calculo_enderecos(endereco1, endereco2):
         try:
-            # Calcula a distância entre os endereços
+            # Calcula a distancia entre os endereços
             loc = geopy.Nominatim(user_agent="distance_calculator")
             
             loc1 = loc.geocode(endereco1, timeout=100)
